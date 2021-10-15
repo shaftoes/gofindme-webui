@@ -16,6 +16,10 @@ export default {
     ]
   },
 
+  publicRuntimeConfig: {
+    baseURL : process.env.BASE_URL || "localhost:3000"
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     'ant-design-vue/dist/antd.css'

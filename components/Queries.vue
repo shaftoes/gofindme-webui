@@ -78,7 +78,7 @@ export default {
   },
   async fetch() {
     this.data = await fetch(
-      'http://localhost:8000/searches'
+      context.env.baseURL
     ).then(res => res.json())
   },
   methods: {
@@ -87,7 +87,7 @@ export default {
       return date.toDateString;
     },
     export_csv(id) {
-      fetch('http://localhost:8000/export/' + id)
+      fetch(context.env.baseURL + id)
       .then(res => res.json())
       .then(res => {
         window.open(res.url)
